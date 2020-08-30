@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;1,200&family=Slabo+27px&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="Resources/fontawesome-free-5.13.1-web/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="titleDiv" id="titleDiv">
+      <p class="title" id="title">Expense Tracker</p>
+      <p class="tagLine" id="tagLine">
+        An online tracker for all your transactions
+      </p>
+    </div>
+    <div class="balanceDiv" id="balanceDiv">
+      <p>Current Balance</p>
+      <p>
+        <i class="fa fa-rupee-sign" id="rupeeSignB"></i>
+        <span class="balance" id="balance">0.00</span>
+      </p>
+    </div>
+    <div class="IvsECategory" id="IvsECategory">
+      <div class="incomeDiv" id="incomeDiv">
+        <p>INCOME</p>
+        <p>
+          <i class="fa fa-rupee-sign" id="rupeeSignI"></i>
+          <span style="color: green;" class="income" id="income">0.00 </span>
+        </p>
+      </div>
+      <div class="expenseDiv" id="expenseDiv">
+        <p>EXPENSE</p>
+        <p>
+          <i class="fa fa-rupee-sign" id="rupeeSignE"></i>
+          <span style="color: orangered;" class="expense" id="expense"
+            >0.00
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="transHead" id="transHead"><p>Recent transactions</p></div>
+    <div class="transactionsDiv" id="transactionsDiv">
+      <div class="entries" id="entries"></div>
+      <div style="text-align: center;">
+        <span class="showTrans" id="showTrans" style="color: blue;"
+          >show all</span
+        >
+      </div>
+    </div>
+    <div class="newTransactionDiv" id="newTransactionDiv">
+      <div class="newTransHead" id="newTransHead">
+        <p>Add a New transaction</p>
+      </div>
+      <form action="" class="newTransForm" id="newTransForm">
+        <div class="newDescDiv" id="newDescDiv">
+          <label for="" class="descIpL">Description</label>
+          <input
+            type="text"
+            class="descIp"
+            id="descIp"
+            placeholder="Transaction description.."
+          />
+        </div>
+        <div class="newAmtDiv" id="newAmtDiv">
+          <label for="amountIp" class="amountIpL"
+            >Enter amount(expense-negative)</label
+          >
+          <input
+            type="text"
+            class="amtIp"
+            id="amtIp"
+            placeholder="Transaction amount.."
+          />
+          <div class="error-msg" id="error-msg">
+            Enter a valid non-zero number.
+          </div>
+        </div>
+        <button type="submit" class="addTransBtn" id="addTransBtn">
+          Add transaction
+        </button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
